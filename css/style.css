@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --main-font : 'Gentium Book Plus', serif;
+    --logo-font : 'Kanit', sans-serif;
+    --main-color : #e2ebf0;
+    --orange-color : #FA4529;
+}
+
+*::selection {
+    color: #FFF;
+    background: var(--orange-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--main-font);
+    list-style: none;
+    transition: all .3s ease;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+a {
+    font-family: var(--logo-font);
+}
+
+.section-title {
+    text-transform: capitalize;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+}
+
+
+/* ========= START HEADER ============== */
+
+header {
+    width: 100%;
+    padding: 3rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    top: 0;right: 0;
+    z-index: 999;
+
+}
+
+
+
+.header .main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: 0s;
+    /* transition: all .1s ease-in-out; */
+
+}
+
+
+
+
+.stick .nav-toggler {
+    display: block;
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: var(--orange-color) ;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem;
+    color: #fff;
+    right: -4%;
+    top: -50%;
+    transform: translateX(0);
+    transition: .3s;
+    }
+
+
+.stick .nav-toggler:hover {
+    top: -30%;
+    right: -2%;
+}
+
+
+
+.nav-toggler {
+    /* display: none; */
+    cursor: pointer;
+    transition: .3s;
+    transform: translateX(200%);
+}
+
+header ul,
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.stick {
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+}
+
+.stick .navbar ul li a {
+    color : #fff;
+}
+
+.stick .main-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: column;
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;right: 0;bottom: 0;
+    background: var(--orange-color);
+    margin: 0;
+
+}
+
+
+.stick .stickNav {
+    transform: translateX(0%);
+    width: 50%;
+    transition: .3s;
+}
+
+.stick .stickNav .navbar ul {
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s;
+
+}
+
+.stick ul li {
+    padding: 2rem 0;
+}
+
+.stick .follow-us a {
+    color: #fff;
+
+}
+
+header .navbar ul li {
+    margin: 0 1rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+header .navbar ul li a.active {
+    color: var(--orange-color);
+    font-weight: 700;
+    position: relative;
+}
+
+.stick .navbar ul li a.active {
+    color : #fff;
+}
+
+header .navbar ul li a {
+    padding : 1rem 0;
+}
+
+header .navbar ul li a.active::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 5px;height: 5px;
+    background: var(--orange-color);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.stick .navbar ul li a.active::after {
+    background: #fff;
+   
+}
+
+header ul li a,
+footer ul li a {
+    color: #000;
+}
+
+header ul li a:hover,
+footer ul li a:hover {
+    color: var(--orange-color);
+}
+
+header .follow-us li,
+footer ul li  {
+    margin: 0rem .5rem;
+    font-size: 1.5rem;
+}
+
+/* ================= START HIGHLIGHT ====================== */
+
+.highlight {
+    margin-top: 1rem ;
+}
+
+.highlight h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-weight: 300;
+
+}
+
+
+/* ================= START HOME ====================== */
+
+.home {
+    display: flex;
+    margin: 5rem 1rem;
+
+
+}
+
+.home .second-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.home .first-side,
+.home .third-side {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home .box-title {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--orange-color);
+    font-weight: 900;
+}
+
+.home .third-side h1 {
+    font-size: 5rem;
+}
+
+.home .third-side {
+    text-align: right;
+}
+
+.home .info-Bx {
+    margin: .5rem;
+
+}
+
+.home .info-Bx p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.home .info-Bx {
+    height: 33.33333333333333333333333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.home .second-side .imgBx {
+    height: 90%;
+    border: .05rem solid var(--orange-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:  15rem;
+    margin: 0 2rem;
+
+
+}
+
+.home .second-side .imgBx .imgBx2 {
+    height: 85%;
+    border-radius:  15rem;
+    width: 85%;
+
+    
+}
+
+.home .second-side .imgBx .imgBx2 img {
+    border-radius:  15rem;
+
+}
+
+/* ================================= MY ADVANTAGE ========================================== */
+
+.advantage {
+    position: relative;
+    /* min-height: 120vh; */
+}
+
+.advantage .bars {
+    display: flex;
+    justify-content: center;
+    height:  100vh;
+    align-items: center;
+}
+
+.advantage .bars .bar {
+    height: 90%;
+    border-radius: 20rem;
+    background: #F2F2F2;
+    margin: 1.5rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    
+}
+
+.advantage .bars .process-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    background-color: #c69c98;
+    height: 0%;
+    border-bottom-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+
+
+}
+
+.advantage .bars .bar-icon {
+    font-size: 3rem;
+    z-index: 1;
+}
+
+.advantage .bars .pourcentage {
+    font-size: 2rem;
+    z-index: 1;
+    color: var(--orange-color);
+
+}
+
+.advantage .bars h3 {
+    z-index: 1;
+}
+
+.advantage .html5 h2 {
+    color: var(--orange-color);
+}
+
+.advantage .css3 h2{
+    color: #278EC3;
+}
+
+.advantage .javascript h2{
+    color: #EAD420;
+}
+
+.advantage .wordpress h2 {
+    color: #206F93;
+}
+
+.advantage .figma  h2{
+    color: #9A54F2;
+}
+
+.advantage .adobe  h2{
+    color: #430134;
+}
+
+/* ================================= MY LATEST PROJECTS ========================================== */
+
+.projects {
+    /* min-height: 150vh; */
+    margin: 5rem 0;
+    position: relative;
+    
+
+}
+
+.projects .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.projects .container {
+    width: 100%;
+    /* height: 300px; */
+}
+
+.projects .cards .card {
+    display: flex;
+    flex-direction: column;
+    /* height: 300px; */
+    margin: .5rem;
+    width: 32%;
+
+
+}
+
+.projects .cards .card .imgBx{
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.projects .cards .card .infoBx {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: .5rem;
+}
+
+
+
+.projects .cards .card .imgBx .hoverBx {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--orange-color);
+    transform: translateY(-100%);
+
+}
+
+.projects .cards .card:hover .imgBx .hoverBx {
+    transform: translateY(0%);
+
+}
+
+.projects .cards .card .imgBx .hoverBx a {
+    margin: .5rem;
+    font-size: 1.2rem;
+    border: .01rem solid var(--orange-color);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    color: var(--orange-color);
+    background: #fff;
+}
+
+.projects .cards .card .imgBx .hoverBx a:hover {
+    transform: translateY(-.5rem);
+}
+
+.projects .cards .card .card-title {
+    font-size: 2rem;
+    color: #838383;
+}
+
+.projects .cards .card span {
+    color: var(--orange-color);
+}
+
+/* ============================== START HIRE ME =============================== */
+
+.hire-me {
+    /* min-height: 100vh; */
+    padding :5rem 0; 
+}
+
+.hire-me input:focus {
+    outline: none;
+}
+
+.hire-me textarea:focus {
+    outline: none;
+}
+
+.hire-me .container-bx {
+    border-radius: 1rem;
+    width: 60%;
+    margin: auto;
+    height: 450px;
+    background-image: linear-gradient(-20deg, #fc6076 0%, var(--orange-color) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hire-me .first-page {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hire-me .second-page .topInputs {
+    display: flex;
+    justify-content:  space-between;
+    width: 100%;
+}
+
+
+.hire-me .second-page form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    width: 90%;
+    margin: auto;
+}
+
+.hire-me .second-page input {
+    width: 100%;
+    height: 100%;
+    padding: 1rem .5rem;
+}
+
+.hire-me .second-page .inputBx {
+    width: 49%;
+    height: 40px;
+    margin: .5rem 0;
+}
+.hire-me .second-page textarea {
+    resize: none;
+    width: 100%;
+    padding: .5rem .5rem;
+
+}
+
+.hire-me .second-page .buttons-Bx {
+    margin: .5rem auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hire-me p {
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.hire-me button {
+    padding: .5rem 1rem;
+    border: none;
+    background: none;
+    border:  .01rem solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    
+}
+
+.hire-me button:hover {
+    background: #fff;
+    color: var(--orange-color);
+    border: .01rem solid var(--orange-color);
+}
+
+.hire-me .second-page {
+    position: absolute;
+    width: 100%;height: 100%;
+    top: 0;left: 0;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hire-me input,
+.hire-me textarea {
+    border: none;
+}
+
+/* ================================ START FOOTER =================================== */
+
+.footer {
+    padding: 3rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-top: .05rem solid gray;
+
+}
+
+.footer .email,
+.footer .rights,
+.footer .follow-us {
+    width: 33.333333333333333333%;
+}
+
+.footer .email {
+    font-size: 1.2rem;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 0;right: 0;
+    margin: 1rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--orange-color);
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateX(200%);
+}
+
+
+/* ================== MEDIA QUERIES ========================= */
+
+@media screen and (max-width : 900px) {
+    header {
+        flex-direction: column;
+        position: fixed;
+        margin: 0;
+        /* height: 100%; */
+
+    }
+
+    .header .stickNav {
+        transform: translateX(0);
+        height: 100%;
+        transition: .3s;
+
+    }
+
+    header .main-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-direction: column;
+        transform: translateX(100%);
+        position: fixed;
+        top: 0;right: 0;bottom: 0;
+        background: var(--orange-color);
+        margin: 0;
+        height: 100%;
+        transition: .3s;
+
+    }
+
+    header .stickNav ul li a.active {
+        color : #fff
+    }
+
+    .stick .stickNav ul li a.active {
+        color : #fff
+    
+    }
+
+
+    header .stickNav ul li a.active::after {
+        background: #fff;
+
+    }
+
+    .stick .stickNav ul li a.active::after {
+        background: #fff;
+       
+    }
+
+
+    .stick .stickNav {
+        transform: translateX(0);
+        height: 100%;
+        transition: .3s;
+
+    }
+
+    header .navbar ul li  a {
+        color: #fff;
+    }
+
+    header .follow-us li a {
+        color:  #fff;
+    }
+
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        font-size: 1.5rem;
+        background-color: var(--orange-color) ;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        top: -40%;
+        right: -8%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 1rem;
+        color: #fff;
+        transition: .3s;
+        }
+    .nav-toggler:hover {
+        top: -30%;
+        right: -5%;
+        transition: .3s;
+
+    }
+    
+    .nav-toggler {
+        transform: translateX(00%);
+
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar ul li {
+        padding: 1rem 0;
+    }
+
+    .highlight {
+        margin-top: 5rem;
+    }
+
+    .highlight h1 {
+        font-size: 1.5rem;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home .sides {
+        width: 100%;
+    }
+
+    .home .second-side {
+        width: 100%;
+        margin: 0;
+    }
+
+    .home .second-side .imgBx {
+        height: 500px;
+        /* width: 300px; */
+
+    }
+
+    .advantage {
+        min-height: 300vh;
+    }
+
+    .advantage .bars {
+        flex-wrap: wrap;
+    }
+
+    .projects {
+        min-height: 250vh;
+    }
+
+    .projects .cards {
+        flex-direction: column;
+    }
+
+    .projects .cards .card {
+        width: 95%;
+    }
+
+    .hire-me .container-bx {
+        width: 90%;
+    }
+
+    .hire-me .container-bx p {
+        font-size: 1.2rem;
+    }
+
+    .hire-me .second-page .topInputs {
+        flex-direction: column;
+    }
+    .hire-me .second-page .topInputs .inputBx {
+        width: 100%;
+    }
+
+    .hire-me .second-page .buttons-Bx {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .footer .email,
+    .footer .rights,
+    .footer .follow-us {
+        width: 100%;
+        margin: 1rem;
+    }
+    
+}
